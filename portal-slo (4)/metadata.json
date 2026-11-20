@@ -1,6 +1,0 @@
-{
-  "name": "Portal SLO — PT. Sabda Duta Paramitha",
-  "description": "Sistem Manajemen Sertifikasi Laik Operasi (SLO), Surat Tugas, Surat Jalan Alat Uji, Job Safety Analysis (JSA), dan Database Google Sheets.",
-  "requestFramePermissions": ["camera", "geolocation"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
