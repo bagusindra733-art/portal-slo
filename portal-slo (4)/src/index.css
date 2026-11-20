@@ -1,0 +1,414 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Official Google Identity Sign-In Button Styling */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #747775;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 44px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+}
+.gsi-material-button .gsi-material-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.gsi-material-button .gsi-material-button-contents {
+  flex-grow: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gsi-material-button:hover {
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 1px 1px 0 rgba(60, 64, 67, 0.15);
+  background-color: #f8fafc;
+}
+.gsi-material-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Animasi ilustrasi login bertema listrik */
+@keyframes slo-flow {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+@keyframes slo-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes slo-arc {
+  0%,
+  88%,
+  100% {
+    opacity: 0;
+  }
+  90%,
+  96% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.25;
+  }
+}
+.slo-flow {
+  stroke-dasharray: 3 33;
+  animation: slo-flow 1.8s linear infinite;
+}
+.slo-pulse {
+  animation: slo-pulse 2.6s ease-in-out infinite;
+}
+.slo-arc {
+  animation: slo-arc 3.4s linear infinite;
+}
+.slo-arc-b {
+  animation-delay: -1.7s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .slo-flow,
+  .slo-pulse,
+  .slo-arc {
+    animation: none;
+  }
+  .slo-arc {
+    opacity: 0.8;
+  }
+}
+
+/* =====================================================================
+   SURAT A4 OFFICIAL DOCUMENT STYLES (Exact match to SURAT_TUGAS_FINAL)
+   Always white paper & black ink, unaffected by UI theme
+   ===================================================================== */
+.a4-paper {
+  background: #ffffff;
+  color: #000000;
+  position: relative;
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto;
+  padding: 40px 64px 30px;
+  font: 16px/1.55 "Times New Roman", Times, serif;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.16);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.a4-paper.long {
+  padding-bottom: 110px;
+}
+.a4-paper.jsa {
+  padding: 28px 44px 22px 45px;
+  min-height: 1123px;
+  font: 12px/1.25 "Times New Roman", Times, serif;
+}
+.a4-paper p {
+  margin: 0 0 8px;
+  text-align: justify;
+}
+.a4-paper .ind {
+  text-indent: 36px;
+}
+.a4-paper .kop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 10px;
+}
+.a4-paper .kop .logo-kiri {
+  height: 86px;
+  width: auto;
+  display: block;
+}
+.a4-paper .kop .logo-kanan {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+}
+.a4-paper h2 {
+  text-align: center;
+  margin: 22px 0 0;
+  font-size: 19px;
+  font-weight: 700;
+  text-decoration: underline;
+  font-family: "Times New Roman", Times, serif;
+}
+.a4-paper .nomor {
+  text-align: center;
+  font-weight: 700;
+  margin: 2px 0 14px;
+}
+.a4-paper .kv {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  margin-bottom: 2px;
+}
+.a4-paper ul {
+  list-style: square;
+  margin: 4px 0 4px 18px;
+  padding: 0;
+}
+.a4-paper ol {
+  margin: 0 0 2px 22px;
+  padding-left: 12px;
+  list-style: decimal;
+}
+.a4-paper li {
+  margin-bottom: 2px;
+}
+.a4-paper .work {
+  margin: 2px 0 10px 20px;
+  text-align: justify;
+}
+.a4-paper .sign {
+  margin: 30px 0 0 auto;
+  width: 300px;
+  text-align: center;
+}
+.a4-paper .sign .gap {
+  height: 90px;
+}
+.a4-paper .sign u {
+  font-weight: 700;
+}
+.a4-paper .foot {
+  position: absolute;
+  left: 64px;
+  right: 64px;
+  bottom: 28px;
+  border-top: 1px solid #000000;
+  padding-top: 6px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* Surat Jalan Alat */
+.a4-paper .sj-head {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-top: 16px;
+}
+.a4-paper h2.sj-title {
+  text-decoration: none;
+  line-height: 1.3;
+  margin: 26px 0 16px;
+}
+.a4-paper table.tb {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 8px 0 10px;
+}
+.a4-paper table.tb th,
+.a4-paper table.tb td {
+  border: 1px solid #000000;
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.35;
+}
+.a4-paper table.tb th {
+  text-align: center;
+  background: #e9e9e9;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.a4-paper table.sj {
+  font-size: 14px;
+}
+.a4-paper table.sj th {
+  background: #b4c7e7;
+}
+.a4-paper table.sj td {
+  padding: 2px 6px;
+}
+.a4-paper table.tb td.c {
+  text-align: center;
+}
+.a4-paper .sj-kend {
+  font-size: 14px;
+  margin: 12px 0 0;
+}
+.a4-paper .sj-sign {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 26px;
+  font-size: 14px;
+  text-align: center;
+  page-break-inside: avoid;
+}
+.a4-paper .sj-sign .gap {
+  height: 70px;
+}
+.a4-paper .sj-sign ol {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+  padding-left: 0;
+}
+.a4-paper .sj-ok {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+  page-break-inside: avoid;
+}
+.a4-paper .sj-ok .gap {
+  height: 60px;
+}
+
+/* JSA Form */
+.a4-paper .jt {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: -1px;
+}
+.a4-paper .jt:first-child {
+  margin-top: 0;
+}
+.a4-paper .kop + .jt {
+  margin-top: 10px;
+}
+.a4-paper .jt td {
+  border: 1px solid #000000;
+  padding: 3px 6px;
+  font-weight: 700;
+  vertical-align: middle;
+  text-align: left;
+}
+.a4-paper .jt td.c {
+  text-align: center;
+}
+.a4-paper .jt td.h {
+  text-align: center;
+  font-size: 13px;
+  padding: 7px 6px;
+}
+.a4-paper .jt.title td {
+  font-size: 17px;
+  padding: 12px 6px;
+  text-align: center;
+}
+.a4-paper .jt.title td.no {
+  font-size: 12px;
+  text-align: left;
+  font-weight: 400;
+}
+.a4-paper .jt td.note {
+  text-align: center;
+  font-weight: 400;
+  padding: 5px;
+  line-height: 1.4;
+}
+.a4-paper .jt.sg td {
+  height: 28px;
+}
+.a4-paper .jt.sg tr:not(:last-child) td.dash {
+  border-bottom: 1px dashed #000000;
+}
+.a4-paper .bx {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #000000;
+  margin-right: 6px;
+  vertical-align: -1px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.a4-paper .bx.on {
+  background: #000000;
+}
+
+/* Print / Save PDF mode: clean 1-page A4 output with zero chrome */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    height: auto !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-stage {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    display: block !important;
+  }
+  .a4-paper {
+    margin: 0 auto !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    zoom: var(--print-zoom, 1) !important;
+    break-inside: avoid;
+    page-break-after: avoid;
+  }
+}
