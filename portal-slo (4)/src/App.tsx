@@ -158,7 +158,7 @@ const TAB_META: Record<ActiveTab, { title: string; subtitle: string }> = {
     subtitle: 'Dokumen Resmi Perusahaan: Legalitas, Perizinan, Sertifikat, SOP & Template',
   },
   personel: {
-    title: 'PERSONEL & TTK',
+    title: 'PERSONEL SKTTK & K3',
     subtitle: 'Sertifikat Kompetensi (SKTTK) & Sertifikat K3 Inspektor',
   },
   alat: {
@@ -822,11 +822,11 @@ export default function App() {
     badge?: number;
   }[] = [
     { id: 'overview', label: 'Overview', icon: LayoutDashboard },
-    { id: 'rekap-sojo', label: 'Rekap JO / SO', icon: Briefcase, badge: db.joSoRecords.length },
+    { id: 'rekap-sojo', label: 'JO / SO', icon: Briefcase, badge: db.joSoRecords.length },
     { id: 'proyek', label: 'Menu Pekerjaan', icon: FolderKanban, badge: db.proj.length },
     { id: 'rekap-dokumen', label: 'Rekap Dokumen', icon: Archive, badge: db.docArchives.length || undefined },
     { id: 'inventaris', label: 'Inventaris Perusahaan', icon: FolderArchive, badge: db.companyDocs.length || undefined },
-    { id: 'personel', label: 'Personel TTK', icon: Users },
+    { id: 'personel', label: 'SKTTK & K3', icon: Users },
     { id: 'alat', label: 'Alat Uji', icon: Wrench },
     { id: 'peringatan', label: 'Peringatan', icon: BellRing, badge: alerts.length || undefined },
     { id: 'profil', label: 'Profil LIT', icon: Building2 },
