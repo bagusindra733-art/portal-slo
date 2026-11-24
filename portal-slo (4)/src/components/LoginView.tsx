@@ -293,7 +293,7 @@ export function LoginView({ onPortalLogin, authError }: LoginViewProps) {
               Selamat Datang
             </h1>
             <p className="mb-5 mt-1.5 text-center text-xs text-slate-500 [@media(max-height:700px)]:mb-3 [@media(max-height:620px)]:hidden">
-              Masukkan username dan password akun Portal SLO Anda
+              Masukkan Username dan Password
             </p>
 
             {shownError && (
