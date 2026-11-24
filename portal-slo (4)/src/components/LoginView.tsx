@@ -276,7 +276,6 @@ export function LoginView({ onPortalLogin, authError }: LoginViewProps) {
               </span>
             </h2>
             <p className="mt-3 hidden max-w-[19rem] text-xs leading-relaxed text-slate-300 lg:block">
-              Portal manajemen Sertifikat Laik Operasi: dari Surat Tugas, Surat Jalan Alat, hingga JSA dan TTE.
             </p>
           </div>
         </section>
