@@ -276,8 +276,7 @@ export function LoginView({ onPortalLogin, authError }: LoginViewProps) {
               </span>
             </h2>
             <p className="mt-3 hidden max-w-[19rem] text-xs leading-relaxed text-slate-300 lg:block">
-              Portal manajemen Sertifikat Laik Operasi: dari Surat Tugas, Surat Jalan Alat, hingga JSA dan TTE.
-            </p>
+                          </p>
           </div>
         </section>
 
@@ -294,7 +293,7 @@ export function LoginView({ onPortalLogin, authError }: LoginViewProps) {
               Selamat Datang
             </h1>
             <p className="mb-5 mt-1.5 text-center text-xs text-slate-500 [@media(max-height:700px)]:mb-3 [@media(max-height:620px)]:hidden">
-              Masukkan username dan password akun Portal SLO Anda
+              Masukkan Username dan Password
             </p>
 
             {shownError && (
