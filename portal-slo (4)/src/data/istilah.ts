@@ -1,0 +1,21 @@
+/** Kamus istilah teknis yang dipakai di portal (tooltip & halaman Panduan). */
+export const ISTILAH: Record<string, { panjang: string; arti: string }> = {
+  PJT: { panjang: 'Penanggung Jawab Teknik', arti: 'Penanggung jawab teknis pekerjaan; menunjuk Leader & tim.' },
+  Leader: { panjang: 'Leader / Ketua Tim', arti: 'Tenaga Teknik yang memimpin tim dan menyiapkan dokumen pekerjaan.' },
+  TT: { panjang: 'Tenaga Teknik', arti: 'Petugas pemeriksa/penguji di lapangan (inspektor).' },
+  'SO': { panjang: 'Sales Order', arti: 'Pesanan pelanggan yang sudah disetujui, dibuat Marketing.' },
+  JO: { panjang: 'Job Order', arti: 'Perintah kerja internal dari Sales Order.' },
+  ST: { panjang: 'Surat Tugas', arti: 'Surat penugasan tim ke lokasi; ditandatangani Direktur.' },
+  JSA: { panjang: 'Job Safety Analysis', arti: 'Analisis keselamatan kerja sebelum pengujian.' },
+  'Surat Jalan': { panjang: 'Surat Jalan Alat', arti: 'Daftar alat uji yang dibawa ke lokasi.' },
+  TTE: { panjang: 'Tanda Tangan Elektronik', arti: 'Tanda tangan digital Direktur pada Surat Tugas.' },
+  TTD: { panjang: 'Tanda Tangan', arti: 'Tanda tangan pada dokumen.' },
+  LIT: { panjang: 'Lembaga Inspeksi Teknik', arti: 'Lembaga yang memeriksa kelaikan instalasi (perusahaan ini).' },
+  SLO: { panjang: 'Sertifikat Laik Operasi', arti: 'Sertifikat bahwa instalasi listrik laik dioperasikan.' },
+  DJK: { panjang: 'Direktorat Jenderal Ketenagalistrikan (ESDM)', arti: 'Instansi yang menerbitkan No. Agenda dan SLO.' },
+  'No. Agenda': { panjang: 'Nomor Agenda DJK', arti: 'Nomor permohonan satu instalasi di sistem DJK ESDM.' },
+  SiUjang: { panjang: 'Sistem Informasi Usaha Jasa Penunjang', arti: 'Akun/portal pemerintah untuk usaha jasa ketenagalistrikan.' },
+  SKTTK: { panjang: 'Sertifikat Kompetensi Tenaga Teknik Ketenagalistrikan', arti: 'Sertifikat keahlian personel; ada masa berlaku.' },
+  K3: { panjang: 'Keselamatan & Kesehatan Kerja', arti: 'Sertifikat keselamatan kerja personel; ada masa berlaku.' },
+  Verifikasi: { panjang: 'Verifikasi LIT', arti: 'Tahap awal Layanan SLO: LIT memeriksa permohonan instalasi.' },
+};
